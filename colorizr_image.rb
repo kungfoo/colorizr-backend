@@ -1,15 +1,18 @@
 require "colorizr_config"
+require "colorizr_histogram"
 require "rubygems"
 require "sqlite3"
 require "base64"
 
 class ColorizrImage
+  attr_reader :id, :image_data, :colorizr_histogram
+  
   @@environment = :production
   @@config = ColorizrConfig.new
   @@db = nil
 
   def initialize(row_data)
-    @id, @image_data, @image_color_vector = row_data
+    @id, @image_data, @colorizr_histogram = row_data
   end
 
   def self.findAll
@@ -34,8 +37,8 @@ class ColorizrImage
   def self.convert_row(row)
     id = row[0]
     image_data = Base64.decode64(row[1])
-    image_color_vector = Base64.decode64(row[2])
-    return [id, image_data, image_color_vector]
+    histogram = ColorizrHistogram.new(row[2])
+    return [id, image_data, histogram]
   end
   
   

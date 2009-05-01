@@ -1,5 +1,4 @@
 require "test/unit"
-
 require "colorizr_config"
 
 class TestColorizrConfig < Test::Unit::TestCase
