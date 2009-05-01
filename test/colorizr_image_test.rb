@@ -12,19 +12,35 @@ class TestColorizrImage < Test::Unit::TestCase
     ColorizrImage.environment = :test
   end
   
-  def test_findAll
+  def test_find_all
     # make sure we're in the right setting...
     assert_equal(:test, ColorizrImage.environment)
-    images = ColorizrImage.findAll
+    images = ColorizrImage.find_all
     assert_equal(2, images.size)
   end
   
   def test_histogram_values_larger_than_zero
-    images = ColorizrImage.findAll
+    images = ColorizrImage.find_all
+    
     images.each do |img|
       img.colorizr_histogram.each do |f|
         assert_equal(true, f >= 0)
       end
     end
+  end
+  
+  def test_switching_database
+    assert_equal(:test, ColorizrImage.environment)
+    images = ColorizrImage.find_all
+    assert_equal(2, images.size)
+    
+    ColorizrImage.environment = :production
+    images = ColorizrImage.find_all
+    assert_equal(21480, images.size)
+    
+    # and back again
+    ColorizrImage.environment = :test
+    images = ColorizrImage.find_all
+    assert_equal(2, images.size)
   end
 end
