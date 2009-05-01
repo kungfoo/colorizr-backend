@@ -2,7 +2,6 @@ require "colorizr_config"
 require "colorizr_histogram"
 require "rubygems"
 require "sqlite3"
-require "base64"
 
 class ColorizrImage
   attr_reader :id, :image_data, :colorizr_histogram
@@ -35,10 +34,8 @@ class ColorizrImage
 
   private
   def self.convert_row(row)
-    id = row[0]
-    image_data = Base64.decode64(row[1])
     histogram = ColorizrHistogram.new(row[2])
-    return [id, image_data, histogram]
+    return [row[0], row[1], histogram]
   end
   
   
