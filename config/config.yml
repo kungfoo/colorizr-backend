@@ -1,1 +1,2 @@
-database: db/mood10k.db
+production_db: db/mood10k.db
+test_db: db/mood-test.db

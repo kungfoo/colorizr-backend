@@ -1,0 +1,55 @@
+require "colorizr_config"
+require "rubygems"
+require "sqlite3"
+require "base64"
+
+class ColorizrImage
+  @@environment = :production
+  @@config = ColorizrConfig.new
+  @@db = nil
+
+  def initialize(row_data)
+    @id, @image_data, @image_color_vector = row_data
+  end
+
+  def self.findAll
+    connect_to_database
+    result = []
+    
+    @@db.execute("select * from mood") do |row|
+      result << ColorizrImage.new(convert_row(row))
+    end
+    return result
+  end
+
+  def self.environment=(env)
+    @@environment = env
+  end
+
+  def self.environment
+    @@environment
+  end
+
+  private
+  def self.convert_row(row)
+    id = row[0]
+    image_data = Base64.decode64(row[1])
+    image_color_vector = Base64.decode64(row[2])
+    return [id, image_data, image_color_vector]
+  end
+  
+  
+  def self.connect_to_database
+    unless @@db
+      case @@environment
+      when :production
+        @@db = SQLite3::Database.new(@@config.production_db)
+      when :test
+        @@db = SQLite3::Database.new(@@config.test_db)
+      else
+      end
+      puts "connected to database!"
+      @@db.type_translation = true
+    end
+  end
+end
