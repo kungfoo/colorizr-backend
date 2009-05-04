@@ -11,7 +11,7 @@ class TestColorizrImage < Test::Unit::TestCase
   def setup
     ColorizrImage.environment = :test
   end
-  
+    
   def test_find_all
     # make sure we're in the right setting...
     assert_equal(:test, ColorizrImage.environment)
