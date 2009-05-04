@@ -5,10 +5,10 @@ require "rubygems"
 require "sqlite3"
 
 class ColorizrImage
-  attr_reader :id, :image_data, :colorizr_vector
-
+  attr_reader :id, :colorizr_vector
+  configatron.configure_from_yaml("config/config.yml")
+  
   @@environment = :production
-  @@config = configatron.configure_from_yaml("config/config.yml")
   @@db = nil
 
   def initialize(row_data)
@@ -18,8 +18,7 @@ class ColorizrImage
   def self.find_all
     connect_to_database
     result = []
-
-    # TODO: merge to database layout.
+    
     @@db.execute("select * from colorizr_vector") do |row|
       result << ColorizrImage.new(convert_row(row))
     end
