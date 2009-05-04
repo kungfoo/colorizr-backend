@@ -9,6 +9,16 @@ class TestColorizrImageSorter < Test::Unit::TestCase
     assert_equal(1, 1)
   end
   
+  def test_sorting_numbers_and_letters
+    scores = [3,2,1]
+    letters = ['c', 'b', 'a']
+    
+    returned = ColorizrImageSorter.sort!(scores, letters)
+    assert_equal(letters, returned)
+    # we should not have a copy, but a changed array
+    assert_equal(letters.object_id, returned.object_id)
+  end
+  
   def test_shifted_colorizr_images
     images = shifted_images
     images.each do |img|
