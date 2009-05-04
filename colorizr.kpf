@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="e5338640-a4c1-4dce-8f1f-a7a5a48f9bcb" kpf_version="4" name="colorizr.kpf">
+<command cwd="/home/kungfoo/Documents/ruby workspace/colorizr-backend" doNotOpenOutputWindow="0" env="" id="b1ed8a9f-62ff-4e4c-ad26-8c90fd98916a" idref="e5338640-a4c1-4dce-8f1f-a7a5a48f9bcb" insertOutput="0" keyboard_shortcut="Alt+R" name="run rake" operateOnSelection="0" parseOutput="0" parseRegex="" runIn="command-output-window" showParsedOutputList="0">
+rake</command>
+<preference-set idref="e5338640-a4c1-4dce-8f1f-a7a5a48f9bcb">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>
