@@ -6,6 +6,8 @@ require "sqlite3"
 
 class ColorizrImage
   attr_reader :id, :colorizr_vector
+  attr_writer :score
+  
   configatron.configure_from_yaml("config/config.yml")
   
   @@environment = :production

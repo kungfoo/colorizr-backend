@@ -6,10 +6,34 @@ static VALUE sorter;
 static void quicksort(VALUE,VALUE,int,int);
 static void check_lengths(VALUE, VALUE);
 static void check_types(VALUE, VALUE);
-static int compare(VALUE a, VALUE b);
-static void swap(VALUE,VALUE,int,int);
+static inline int compare(VALUE a, VALUE b);
+static inline void swap(VALUE,VALUE,int,int);
 
 #define pivot_index() (start+(end-start)/2) // TODO: implement median of three pivoting
+
+static inline void swap_s(VALUE arr, int a, int b){
+	VALUE t = rb_ary_entry(arr, b);
+	rb_ary_store(arr, b, rb_ary_entry(arr, a));
+	rb_ary_store(arr, a, t);
+}
+
+static inline void swap(VALUE scores, VALUE items, int a, int b){
+	swap_s(scores,a,b);
+	swap_s(items, a,b);
+}
+
+static inline int compare(VALUE a, VALUE b){
+	double a_v; double b_v;
+	a_v = RFLOAT(a)->value;
+	b_v = RFLOAT(b)->value;
+	if(a_v < b_v){
+		return -1;
+	} else if(a_v > b_v){
+		return 1;
+	} else {
+		return 0;
+	}
+}
 
 // here goes...
 static VALUE sort(VALUE self, VALUE scores, VALUE items){
@@ -43,22 +67,6 @@ static void quicksort(VALUE scores, VALUE items, int start, int end){
 		quicksort(scores, items, start, l);
 		quicksort(scores, items, r, end);
 	}
-}
-
-static void swap_s(VALUE arr, int a, int b){
-	VALUE t = rb_ary_entry(arr, b);
-	rb_ary_store(arr, b, rb_ary_entry(arr, a));
-	rb_ary_store(arr, a, t);
-}
-
-static void swap(VALUE scores, VALUE items, int a, int b){
-	swap_s(scores,a,b);
-	swap_s(items, a,b);
-}
-
-static int compare(VALUE a, VALUE b){
-	VALUE cmp = rb_funcall(a, rb_intern("<=>"), 1, b);
-	return NUM2INT(cmp);
 }
 
 static void check_types(VALUE scores, VALUE items){

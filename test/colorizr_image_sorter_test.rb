@@ -10,13 +10,31 @@ class TestColorizrImageSorter < Test::Unit::TestCase
   end
   
   def test_sorting_numbers_and_letters
-    scores = [3,2,1]
+    scores = [3.0,2.0,1.0]
     letters = ['c', 'b', 'a']
     
     returned = ColorizrImageSorter.sort!(scores, letters)
     assert_equal(letters, returned)
+    assert_equal(['a','b','c'], returned)
+    assert_equal([1.0,2.0,3.0], scores)
     # we should not have a copy, but a changed array
     assert_equal(letters.object_id, returned.object_id)
+  end
+  
+  def test_sorting_numbers_and_objects
+    scores = []
+    objects = []
+    
+    100000.times do
+      scores << rand()
+      objects << Object.new
+    end
+    
+    scores_control = Array.new(scores)
+    
+    ColorizrImageSorter.sort!(scores, objects)
+    scores_control.sort!
+    assert_equal(scores_control, scores)
   end
   
   def test_shifted_colorizr_images
