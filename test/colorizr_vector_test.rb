@@ -8,8 +8,8 @@ class TestColorizrVector < Test::Unit::TestCase
 
     # the two boundaries are known
     assert_equal(0, map_value(0,0,0))
-    assert_equal(124, map_value(255,255,255))
-    assert_equal(62, map_value(127,127,127))
+    assert_equal(ColorizrVector::VECTOR_LENGTH-1, map_value(255,255,255))
+    assert_equal((ColorizrVector::VECTOR_LENGTH-1)/2, map_value(127,127,127))
   end
 
   def test_from_increasing_binary
@@ -19,7 +19,7 @@ class TestColorizrVector < Test::Unit::TestCase
 
     vector = ColorizrVector.new(binary)
     assert_equal(0, vector.amount_of_color([0,0,0]))
-    assert_equal(124, vector.amount_of_color([255,255,255]))
+    assert_equal(ColorizrVector::VECTOR_LENGTH-1, vector.amount_of_color([255,255,255]))
 
     i = 0
     (0..255).step(ColorizrVector::COLOR_STEP) do |r|
@@ -38,8 +38,6 @@ class TestColorizrVector < Test::Unit::TestCase
   end
 
   def ordered_vector
-    vector = (0...ColorizrVector::VECTOR_LENGTH).to_a
-    assert_equal(125, vector.size)
-    return vector
+    (0...ColorizrVector::VECTOR_LENGTH).to_a
   end
 end
