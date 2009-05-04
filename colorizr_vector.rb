@@ -17,6 +17,10 @@ class ColorizrVector
     @vector.each { |i| yield i }
   end
   
+  def self.map_bin_to_color(bin)
+    
+  end
+  
   private
   def map_to_bin(r,g,b)
     NUM_BINS_SQ * (r/COLOR_STEP) + NUM_BINS * (g/COLOR_STEP) + b/COLOR_STEP
