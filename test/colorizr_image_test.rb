@@ -19,11 +19,11 @@ class TestColorizrImage < Test::Unit::TestCase
     assert_equal(2, images.size)
   end
   
-  def test_histogram_values_larger_than_zero
+  def test_vector_values_larger_than_zero
     images = ColorizrImage.find_all
     
     images.each do |img|
-      img.colorizr_histogram.each do |f|
+      img.colorizr_vector.each do |f|
         assert_equal(true, f >= 0)
       end
     end

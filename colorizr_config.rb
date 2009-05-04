@@ -5,6 +5,7 @@ class ColorizrConfig
   
   def initialize
     @config = YAML.load_file(CONFIG_FILE)
+
   end
   
   def method_missing(method, *args)
