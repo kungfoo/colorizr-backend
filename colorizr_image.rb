@@ -12,7 +12,7 @@ class ColorizrImage
   @@db = nil
 
   def initialize(row_data)
-    @id, @image_data, @colorizr_vector = row_data
+    @id, @colorizr_vector = row_data
   end
 
   def self.find_all
@@ -20,7 +20,7 @@ class ColorizrImage
     result = []
 
     # TODO: merge to database layout.
-    @@db.execute("select * from mood") do |row|
+    @@db.execute("select * from colorizr_vector") do |row|
       result << ColorizrImage.new(convert_row(row))
     end
     return result
@@ -38,8 +38,8 @@ class ColorizrImage
 
   private
   def self.convert_row(row)
-    vector = ColorizrVector.new(row[2])
-    return [row[0], row[1], vector]
+    vector = ColorizrVector.new(row[1])
+    return [row[0], vector]
   end
 
   def self.connect_to_database
