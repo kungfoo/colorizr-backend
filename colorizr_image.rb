@@ -28,7 +28,7 @@ class ColorizrImage
     @@environment = env
     reconnect
   end
-
+  
   def self.environment
     @@environment
   end
