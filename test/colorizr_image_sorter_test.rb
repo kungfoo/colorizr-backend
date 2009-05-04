@@ -37,6 +37,24 @@ class TestColorizrImageSorter < Test::Unit::TestCase
     assert_equal(scores_control, scores)
   end
   
+  def test_sorting_few_numbers
+    scores = []
+    objects = []
+    
+    1000.times do
+      scores << rand()
+      objects << Object.new
+    end
+    
+    ColorizrImageSorter.sort!(scores, objects)
+    
+    min = 0
+    scores.each do |value|
+      assert_equal(true, value >= min)
+      min = value
+    end
+  end
+  
   def test_shifted_colorizr_images
     images = shifted_images
     images.each do |img|
