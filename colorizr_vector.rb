@@ -1,4 +1,4 @@
-class ColorizrHistogram
+class ColorizrVector
   COLOR_STEP = 63
   NUM_BINS  = 256 / COLOR_STEP + 1  
   VECTOR_LENGTH = NUM_BINS ** 3
