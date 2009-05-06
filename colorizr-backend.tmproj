@@ -3,38 +3,60 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>test/colorizr_image_test.rb</string>
+	<string>colorizr_config.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_config.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-01T15:18:35Z</date>
+			<date>2009-05-05T14:11:41Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_backend.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-01T15:18:41Z</date>
+			<date>2009-05-04T14:28:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>colorizr_histogram.rb</string>
+			<string>sort_benchmark.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-01T15:47:51Z</date>
+			<date>2009-05-04T19:36:21Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>colorizr_vector.rb</string>
+			<key>lastUsed</key>
+			<date>2009-05-04T19:35:45Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>colorizr_image_sorter.rb</string>
+			<key>lastUsed</key>
+			<date>2009-05-04T19:36:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_image.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-01T15:47:48Z</date>
+			<date>2009-05-04T19:35:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Rakefile</string>
 			<key>lastUsed</key>
-			<date>2009-05-01T13:58:49Z</date>
+			<date>2009-05-04T14:28:47Z</date>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>ext</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>ext</string>
 		</dict>
 		<dict>
 			<key>expanded</key>
@@ -61,42 +83,14 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>colorizr_backend.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>colorizr_config.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>24</integer>
 				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>colorizr_histogram.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>4</integer>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -108,21 +102,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>33</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>test/colorizr_config_test.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>3</integer>
+				<integer>2</integer>
 				<key>line</key>
 				<integer>9</integer>
 			</dict>
@@ -131,14 +111,56 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>test/colorizr_image_test.rb</key>
+		<key>colorizr_image_sorter.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>29</integer>
+				<integer>13</integer>
 				<key>line</key>
-				<integer>31</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>colorizr_vector.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>sort_benchmark.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>test/colorizr_image_sorter_test.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>53</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -148,16 +170,16 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>colorizr_backend.rb</string>
-		<string>colorizr_config.rb</string>
+		<string>test/colorizr_image_sorter_test.rb</string>
+		<string>colorizr_vector.rb</string>
 		<string>colorizr_image.rb</string>
-		<string>test/colorizr_image_test.rb</string>
-		<string>colorizr_histogram.rb</string>
-		<string>test/colorizr_config_test.rb</string>
+		<string>sort_benchmark.rb</string>
+		<string>colorizr_image_sorter.rb</string>
+		<string>colorizr_config.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{233, 106}, {1311, 821}}</string>
+	<string>{{236, 104}, {1311, 821}}</string>
 </dict>
 </plist>

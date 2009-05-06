@@ -1,5 +1,4 @@
 #include "ruby.h"
-#include <ctype.h>
 
 static VALUE sorter;
 // forward declarations
