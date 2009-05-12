@@ -16,6 +16,14 @@ class ColorizrImage
   def initialize(row_data)
     @id, @colorizr_vector = row_data
   end
+  
+  
+  def amount_of_color(color)
+    colorizr_vector.amount_of_color(color)
+  end
+  
+  
+  # class methods
 
   def self.find_all
     connect_to_database
