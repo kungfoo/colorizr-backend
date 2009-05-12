@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>colorizr_config.rb</string>
+	<string>ext/colorizr_image_sorter_native.c</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_config.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-05T14:11:41Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-05-06T14:58:04Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -24,31 +22,31 @@
 			<key>filename</key>
 			<string>sort_benchmark.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-04T19:36:21Z</date>
+			<date>2009-05-06T14:58:03Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_vector.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-04T19:35:45Z</date>
+			<date>2009-05-06T14:58:01Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_image_sorter.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-04T19:36:20Z</date>
+			<date>2009-05-06T14:58:03Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>colorizr_image.rb</string>
 			<key>lastUsed</key>
-			<date>2009-05-04T19:35:46Z</date>
+			<date>2009-05-06T14:58:02Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Rakefile</string>
 			<key>lastUsed</key>
-			<date>2009-05-04T14:28:47Z</date>
+			<date>2009-05-06T14:39:30Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -59,8 +57,6 @@
 			<string>ext</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>config</string>
 			<key>regexFolderFilter</key>
@@ -69,8 +65,6 @@
 			<string>config</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>test</string>
 			<key>regexFolderFilter</key>
@@ -83,103 +77,28 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>colorizr_config.rb</key>
+		<key>ext/colorizr_image_sorter_native.c</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>24</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>colorizr_image.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>colorizr_image_sorter.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>13</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>colorizr_vector.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>6</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>sort_benchmark.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>6</integer>
-				<key>line</key>
-				<integer>17</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>test/colorizr_image_sorter_test.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>17</integer>
-				<key>line</key>
-				<integer>53</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>test/colorizr_image_sorter_test.rb</string>
-		<string>colorizr_vector.rb</string>
-		<string>colorizr_image.rb</string>
-		<string>sort_benchmark.rb</string>
-		<string>colorizr_image_sorter.rb</string>
-		<string>colorizr_config.rb</string>
+		<string>ext/colorizr_image_sorter_native.c</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{236, 104}, {1311, 821}}</string>
+	<string>{{258, 60}, {1263, 962}}</string>
 </dict>
 </plist>

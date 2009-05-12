@@ -1,3 +1,6 @@
 db/mood10k.db
 db/colorizr_image_data_20k.db
 db/colorizr_vector_20k.db
+*.o
+*.bundle
+Makefile
