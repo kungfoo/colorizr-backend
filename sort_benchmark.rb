@@ -23,7 +23,7 @@ class SortBenchmark
   end
   
   def sort_array
-    @s2 = @s2.sort!
+    
   end
   
   def scores_array(n)
