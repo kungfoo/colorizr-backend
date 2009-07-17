@@ -34,7 +34,9 @@ static inline int compare(VALUE a, VALUE b){
 	}
 }
 
-// here goes...
+/*
+* test...
+*/
 static VALUE sort(VALUE self, VALUE scores, VALUE items){
 	// sanitiy checks first
 	check_types(scores, items);
