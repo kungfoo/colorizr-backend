@@ -57,9 +57,18 @@ class TestColorizrImageSorter < Test::Unit::TestCase
   
   def test_shifted_colorizr_images
     images = shifted_images
+    
+    # TODO: Implement sorting of those images.
+    scores = []
     images.each do |img|
-      vector = img.colorizr_vector
-      assert_equal(ColorizrVector::VECTOR_LENGTH, vector.size)
+      scores << img.amount_of_color([0,0,0])
+    end
+    
+    ColorizrImageSorter.sort!(scores, images)
+    id = 0
+    images.each do |img|
+      assert_equal(id, img.id)
+      id += 1
     end
   end
   
@@ -69,10 +78,16 @@ class TestColorizrImageSorter < Test::Unit::TestCase
     result = []
     vector = (0...ColorizrVector::VECTOR_LENGTH).to_a
     
+    vector.each_with_index do |f, index|
+      vector[index] = f.to_f
+    end
+    
     ColorizrVector::VECTOR_LENGTH.times do |id|
-      result << ColorizrImage.new([id, Array.new(vector)])
+      colorizr_vector = ColorizrVector.new(vector.pack(ColorizrVector::FORMAT_STRING))
+      result << ColorizrImage.new([id, colorizr_vector])
       vector << vector.shift
     end
+    
     return result
   end
 end

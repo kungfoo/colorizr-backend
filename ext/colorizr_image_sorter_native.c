@@ -21,6 +21,9 @@ static inline void swap(VALUE scores, VALUE items, int a, int b){
 	swap_s(items, a,b);
 }
 
+/*
+* comapres two values in the array as T_FLOATs. This will fail if the array contains other values!!
+*/
 static inline int compare(VALUE a, VALUE b){
 	double a_v; double b_v;
 	a_v = RFLOAT(a)->value;
