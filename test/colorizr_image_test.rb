@@ -36,8 +36,8 @@ class TestColorizrImage < Test::Unit::TestCase
     
     ColorizrImage.environment = :production
     # commented out while actively developing. slows test.
-    # images = ColorizrImage.find_all
-    # assert_equal(21480, images.size)
+    images = ColorizrImage.find_all
+    assert_equal(10401, images.size)
     
     # and back again
     ColorizrImage.environment = :test

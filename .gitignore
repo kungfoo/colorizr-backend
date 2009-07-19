@@ -5,3 +5,4 @@ db/colorizr_image_data_10k.db
 db/colorizr_vector_10k.db
 *.bundle
 Makefile
+out/*

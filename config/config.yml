@@ -4,5 +4,5 @@ database:
     image_data: db/colorizr_image_data_test.db
     
   production:
-    vector: db/colorizr_vector_20k.db
-    image_data: db/colorizr_image_data_20k.db
+    vector: db/colorizr_vector_10k.db
+    image_data: db/colorizr_image_data_10k.db

@@ -1,4 +1,3 @@
-require "colorizr_config"
 
 class ColorizrBackend
   

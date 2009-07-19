@@ -57,12 +57,7 @@ class TestColorizrImageSorter < Test::Unit::TestCase
   
   def test_shifted_colorizr_images
     images = shifted_images
-    
-    # TODO: Implement sorting of those images.
-    scores = []
-    images.each do |img|
-      scores << img.amount_of_color([0,0,0])
-    end
+    scores = images.collect { |img| img.amount_of_color([0,0,0]) }
     
     ColorizrImageSorter.sort!(scores, images)
     id = 0
