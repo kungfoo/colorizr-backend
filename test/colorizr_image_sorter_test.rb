@@ -41,17 +41,18 @@ class TestColorizrImageSorter < Test::Unit::TestCase
     scores = []
     objects = []
     
-    1000.times do
+    103.times do
       scores << rand()
       objects << Object.new
     end
     
     ColorizrImageSorter.sort!(scores, objects)
     
-    min = 0
-    scores.each do |value|
-      assert_equal(true, value >= min)
-      min = value
+    # each should be smaller than all following values.
+    scores.each_with_index do |score, i|
+      scores[i..scores.size].each do |it|
+        assert(score <= it, "#{score} !<= #{it}")
+      end
     end
   end
   
